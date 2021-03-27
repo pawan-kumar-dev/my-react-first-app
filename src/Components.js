@@ -6,4 +6,4 @@ const Main = () => <div>This is main section</div>;
 
 const Footer = () => <div>This is footer</div>;
 
-export { Header, Footer };
+export { Header, Footer, Main };
