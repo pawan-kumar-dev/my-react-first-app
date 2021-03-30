@@ -4,6 +4,7 @@ import React from "react";
 import DataFile from "./Data"; //default import
 import { Header, Footer } from "./Components"; //named import
 import Card from "./Card";
+import Form from "./Form";
 
 // Components are of 2 types StateFull(Class Component) and StateLess (Functional component)
 
@@ -14,8 +15,13 @@ class App extends React.Component {
       count: 10,
       addition: 12,
       sub: 34,
+      input: "",
     };
   }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state.input);
+  };
   render() {
     const { count, addition, sub } = this.state;
     // map, filter, findIndex, find
@@ -71,11 +77,26 @@ class App extends React.Component {
         {data.map(({ name, price, color }) => {
           return <Card name={name} price={price} color={color} key={name} />;
         })}
-        {/* <DataFile object={count} title="Count" />
+        {/* <DataFile
+          object={count}
+          title="Count"
+          // text={`${isSubscribed ? "Thanks" : "Welcome user"}`}
+        />
         <DataFile object={addition} title="Add" />
         <DataFile object={sub} title="Sub" />
         <Header />
         <Footer /> */}
+        {/* <form onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            value={this.state.input}
+            onChange={(e) => {
+              this.setState({ input: e.target.value });
+            }}
+          />
+          <button type="submit">Submit</button>
+        </form> */}
+        <Form />
       </React.Fragment>
     );
   }
