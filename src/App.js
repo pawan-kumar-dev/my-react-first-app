@@ -1,8 +1,8 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import DataFile from "./Data"; //default import
-import { Header, Footer } from "./Components"; //named import
+// import DataFile from "./Data"; //default import
+// import { Header, Footer } from "./Components"; //named import
 import Card from "./Card";
 import Form from "./Form";
 
@@ -23,7 +23,7 @@ class App extends React.Component {
     console.log(this.state.input);
   };
   render() {
-    const { count, addition, sub } = this.state;
+    // const { count, addition, sub } = this.state;
     // map, filter, findIndex, find
     const data = [
       {
@@ -75,7 +75,13 @@ class App extends React.Component {
           Update Subtration
         </button>
         {data.map(({ name, price, color }) => {
-          return <Card name={name} price={price} color={color} key={name} />;
+          return (
+            <Card name={name} price={price} color={color} key={name}>
+              <p>{name}</p>
+              <p>{price}</p>
+              <p>{color}</p>
+            </Card>
+          );
         })}
         {/* <DataFile
           object={count}

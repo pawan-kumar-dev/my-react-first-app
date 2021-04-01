@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Card = (props) => {
   const { name, price } = props;
   const [state, setState] = useState(12);
-  const [count, setCount] = useState(10);
+  // const [count, setCount] = useState(10);
   const headingStyle = {
     fontSize: "24px",
   };
@@ -15,7 +15,7 @@ const Card = (props) => {
   //   console.log(a > b ? true : false);
   //   console.log(a > b || false);
   //   console.log(a > b && true);
-  console.log(state);
+  console.log(props.children);
   return (
     <div style={{ backgroundColor: "yellow", padding: "10px", margin: "10px" }}>
       <h1 style={headingStyle}>Name: {name}</h1>
