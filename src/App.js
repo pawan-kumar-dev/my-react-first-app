@@ -1,10 +1,12 @@
 // import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
+import Todo from "./Todo";
+import Form2 from "./Form2";
 // import DataFile from "./Data"; //default import
 // import { Header, Footer } from "./Components"; //named import
-import Card from "./Card";
-import Form from "./Form";
+// import Card from "./Card";
+// import Form from "./Form";
 
 // Components are of 2 types StateFull(Class Component) and StateLess (Functional component)
 
@@ -25,25 +27,25 @@ class App extends React.Component {
   render() {
     // const { count, addition, sub } = this.state;
     // map, filter, findIndex, find
-    const data = [
-      {
-        name: "Orange",
-        price: "20",
-        color: "blue",
-      },
-      {
-        name: "Grapes",
-        price: "30",
-        color: "red",
-      },
-      {
-        name: "Banana",
-        price: "20",
-      },
-    ];
+    // const data = [
+    //   {
+    //     name: "Orange",
+    //     price: "20",
+    //     color: "blue",
+    //   },
+    //   {
+    //     name: "Grapes",
+    //     price: "30",
+    //     color: "red",
+    //   },
+    //   {
+    //     name: "Banana",
+    //     price: "20",
+    //   },
+    // ];
     return (
       <React.Fragment>
-        <button
+        {/* <button
           style={{
             color: "red",
             backgroundColor: "blue",
@@ -73,8 +75,8 @@ class App extends React.Component {
           }
         >
           Update Subtration
-        </button>
-        {data.map(({ name, price, color }) => {
+        </button> */}
+        {/* {data.map(({ name, price, color }) => {
           return (
             <Card name={name} price={price} color={color} key={name}>
               <p>{name}</p>
@@ -82,7 +84,7 @@ class App extends React.Component {
               <p>{color}</p>
             </Card>
           );
-        })}
+        })} */}
         {/* <DataFile
           object={count}
           title="Count"
@@ -102,7 +104,9 @@ class App extends React.Component {
           />
           <button type="submit">Submit</button>
         </form> */}
-        <Form />
+        {/* <Form /> */}
+        <Todo />
+        {/* <Form2 /> */}
       </React.Fragment>
     );
   }
